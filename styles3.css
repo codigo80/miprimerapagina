@@ -1,39 +1,11 @@
-body {
-    background-color: lightblue;
-    color: darkblue;
-}
-h1 {
-    font-family: Arial,sans-serif;
-    font-size: 36px;
-    text-align: center;
-}
-p {
-    font-family: Georgia,serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 20px;
-}
-.container {
+.carousel {
     max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-.row {
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
 }
-.column {
- flex:1;
- padding: 10px;
+#imagen {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
 }
-.imagen {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-}
-@media (max-width:600px){
-    .column {
-        flex:100%;
-    }
-}
+

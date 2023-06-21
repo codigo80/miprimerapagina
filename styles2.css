@@ -1,86 +1,76 @@
-.container-nav {
-    display: flex;
-    padding: 10px;
-    height: 50px;
-    background-color: black;
-  }
-  
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  
-  .brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  li>a {
-    padding: 8px 24px;
-  }
-  
-  
-  li {
+/* slider */
+.slider {
+    border-radius: 5px;
+    box-shadow: 5px 5px hsl(0, 0%, 76%);
+    position: relative;
+}
+
+.slider ul {
     list-style-type: none;
-  }
-  
-  
-  a {
-    color: white;
-    text-decoration:none;
-  }
-  
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .button-menu-toggle {
+    margin: 0;
+    padding: 0;    
+}
+
+.slider ul li  {
+    position: relative;
     display: none;
-  }
+    height:350px;
+}
+
+.slider ul li img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.slider ul li span {
+    position: absolute;
+    bottom: 0;
+    background: hsl(0, 1%, 72%, .1);
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+/* buttons */
+.slider .buttons  {
+    position: absolute;
+    top: 40%;
+    width:  100%;
+}
+.slider .buttons .next {
+    font-size: 2rem;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}    
+.slider .buttons .prev {
+    font-size: 2rem;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}   
+.slider .buttons .next:hover {
+    background: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 93%);
+}
+.slider .buttons .prev:hover {
+    background: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 93%);
+}
+
+/* slider animation */
+.slider ul li {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
   
-  @media (max-width: 768px) {
-    .column {
-      flex: 100%;
-    }
-  
-  
-    .nav-links {
-      display: none;
-    }
-  
-  
-    .button-menu-toggle {
-      display: block;
-      background-color: white;
-      border:none;
-      border-radius: 50px;
-      padding: 0 24px;
-      font-family: monospace;
-      font-weight: bold;
-      font-size: 20px;
-    }
-   
-    .nav-links.nav-links-responsive {
-      position: absolute;
-      display: flex;
-      background-color: rgba(20,20,20,0.95);
-      width: 100%;
-      height: 100%;
-      top: 70px;
-      left: 0;
-      flex-direction: column;
-      padding-top: 200px;
-      align-items: center;
-      gap:70px;
-      font-size: 40px;
-  
-  
-    }
-  }
+@keyframes fade {
+    from {opacity: .2} 
+    to {opacity: 1}
+}
